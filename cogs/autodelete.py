@@ -80,7 +80,7 @@ class autodelete(commands.Cog):
             delay = time2 * 86400
         elif since.lower() in weeks:
             delay = time2 * 604800
-        if str(channel.id) in autod_channels:
+        if str(channel.id) in autodelete_channels:
             del autod_channels[str(ctx.channel.id)]
         autod_channels[str(channel.id)] = []
         autod_channels[str(channel.id)].append(delay)
